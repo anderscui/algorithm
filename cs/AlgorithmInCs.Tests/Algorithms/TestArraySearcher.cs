@@ -6,7 +6,6 @@ using System.Text;
 using NUnit.Framework;
 
 using Andersc.AlgorithmInCs.Algorithms;
-using Andersc.AlgorithmInCs.Common;
 using Andersc.AlgorithmInCs.Common.Extensions;
 
 namespace Andersc.AlgorithmInCs.Tests.Algorithms
@@ -27,6 +26,20 @@ namespace Andersc.AlgorithmInCs.Tests.Algorithms
             Assert.That(index, Is.EqualTo(5));
 
             index = ArraySearcher.Sequential(data, 12, 0, data.Length - 1);
+            Assert.That(index, Is.LessThan(0));
+        }
+
+        [TestCase]
+        public void TestBinary()
+        {
+            var data = GetTestData();
+            Array.Sort(data);
+            //data.Print();
+
+            var index = ArraySearcher.Binary(data, 10, 0, data.Length - 1);
+            Assert.That(index, Is.EqualTo(5));
+
+            index = ArraySearcher.Binary(data, 12, 0, data.Length - 1);
             Assert.That(index, Is.LessThan(0));
         }
     }

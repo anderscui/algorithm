@@ -36,13 +36,23 @@ namespace Andersc.AlgorithmInCs.Algorithms
         /// </summary>
         public static int Binary(int[] a, int v, int left, int right)
         {
-            for (int i = left; i <= right; i++)
+            while (left <= right)
             {
-                if (a[i] == v)
+                var mid = (left + right)/2;
+                if (a[mid] == v)
                 {
-                    return i;
+                    return mid;
+                }
+                else if(a[mid] < v)
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
                 }
             }
+
             return NotFound;
         }
     }

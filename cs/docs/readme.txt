@@ -8,6 +8,7 @@ http://book.douban.com/subject/4065258/
 
 via .NET Framework:
 ArraySegment<T>
+Array.Sort()
 
 abbreviations:
 bx: book x (x is a certain number)
