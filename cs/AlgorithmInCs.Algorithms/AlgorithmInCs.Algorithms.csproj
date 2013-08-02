@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Evaluator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Connectivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlgorithmInCs.Common\AlgorithmInCs.Common.csproj">

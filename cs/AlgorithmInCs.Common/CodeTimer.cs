@@ -26,7 +26,7 @@ namespace Andersc.AlgorithmInCs.Common
 
         static CodeTimer()
         {
-            // Set priority of current process to "high" to reduce the influence of OS.
+            // Set priority of current process to "high" to reduce the effect of OS.
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
             Thread.CurrentThread.Priority = ThreadPriority.Highest;
         }

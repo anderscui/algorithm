@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\TestConnectivity.cs" />
     <Compile Include="Algorithms\TestEvaluator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,6 +53,10 @@
     <ProjectReference Include="..\AlgorithmInCs.Algorithms\AlgorithmInCs.Algorithms.csproj">
       <Project>{CBB2BEC1-F43E-4634-A9C4-6DF930CDDF8D}</Project>
       <Name>AlgorithmInCs.Algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlgorithmInCs.Common\AlgorithmInCs.Common.csproj">
+      <Project>{befd2c23-4360-4523-8118-b77f84813d00}</Project>
+      <Name>AlgorithmInCs.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

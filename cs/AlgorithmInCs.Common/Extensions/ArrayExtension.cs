@@ -140,11 +140,11 @@ namespace Andersc.AlgorithmInCs.Common.Extensions
         }
 
         // TODO: refactor this, use a delegate like Action<T>?
-        public static void PrintToConsole<T>(this T[] array)
+        public static void PrintToConsole<T>(this T[] array, string title = "Elements: ")
         {
             Console.WriteLine("************");
 
-            Console.WriteLine("Elements: ");
+            Console.WriteLine(title);
             foreach (T elem in array)
             {
                 Console.Write("{0}  ", elem);
