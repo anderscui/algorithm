@@ -6,47 +6,52 @@ using System.Text;
 namespace Andersc.AlgorithmInCs.Algorithms
 {
     /// <summary>
-    /// From book1.
+    /// From b1, ch 01.
+    /// Given N objects and M pairs, this algorithm checks connectivity property of them, and output pairs.
+    /// Abstract operations: { 
+    ///     find: checks whether a new pair input is connected;
+    ///     union: if connection is not found, union two collections; }
+    /// These methods use a tree(implemented by an array) to represent the connectivity between objects.
     /// </summary>
     public class Connectivity
     {
         public static int[] QuickFind(List<Tuple<int, int>> pairs)
         {
-            var arr = new int[pairs.Count * 2];
-            for (int i = 0; i < arr.Length; i++)
+            var id = new int[pairs.Count * 2];
+            for (int i = 0; i < id.Length; i++)
             {
-                arr[i] = i;
+                id[i] = i;
             }
             
             foreach (var pair in pairs)
             {
                 int p = pair.Item1, q = pair.Item2;
-                if (arr[p] == arr[q])
+                if (id[p] == id[q])
                 {
                     continue;
                 }
 
-                var temp = arr[p];
-                for (int j = 0; j < arr.Length; j++)
+                var temp = id[p];
+                for (int j = 0; j < id.Length; j++)
                 {
-                    if (arr[j] == temp)
+                    if (id[j] == temp)
                     {
-                        arr[j] = arr[q];
+                        id[j] = id[q];
                     }
                 }
                 Console.WriteLine("{0} {1}", p, q);
             }
 
-            return arr;
+            return id;
         }
 
         public static int[] QuickUnion(List<Tuple<int, int>> pairs)
         {
-            var arr = new int[pairs.Count * 2];
-            for (var i = 0; i < arr.Length; i++)
+            var id = new int[pairs.Count * 2];
+            for (var i = 0; i < id.Length; i++)
             {
                 // initially every node is its own root now.
-                arr[i] = i;
+                id[i] = i;
             }
 
             foreach (var pair in pairs)
@@ -55,16 +60,16 @@ namespace Andersc.AlgorithmInCs.Algorithms
 
                 // find roots of current nodes;
                 int m, n;
-                for (m = p; m != arr[m]; m = arr[m]) { }
-                for (n = q; n != arr[n]; n = arr[n]) { }
+                for (m = p; m != id[m]; m = id[m]) { }
+                for (n = q; n != id[n]; n = id[n]) { }
 
                 if (m == n) { continue; }
                 
-                arr[m] = n;
+                id[m] = n;
                 Console.WriteLine("{0} {1}", p, q);
             }
 
-            return arr;
+            return id;
         }
 
         public static int[] WeightedQuickUnion(List<Tuple<int, int>> pairs)

@@ -42,24 +42,24 @@ namespace Andersc.AlgorithmInCs.Tests.Algorithms
         }
         
         [TestCase]
-        public void TestQuickFind()
+        public void TestQuickFind() 
         {
             var result = Connectivity.QuickFind(GetTestData());
-            result.PrintToConsole();
+            result.Print();
         }
 
         [TestCase]
         public void TestQuickUnion()
         {
             var result = Connectivity.QuickUnion(GetTestData());
-            result.PrintToConsole("QuickUnion: ");
+            result.Print("QuickUnion: ");
         }
 
         [TestCase]
         public void TestWeightedQuickUnion()
         {
             var result = Connectivity.WeightedQuickUnion(GetTestData());
-            result.PrintToConsole("WeightedQuickUnion: ");
+            result.Print("WeightedQuickUnion: ");
         }
     }
 }
