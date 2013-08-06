@@ -3,6 +3,6 @@
 
 int main()
 {
-    printf("Hello algorithm!\n");
+    printf("Hello Algorithm!\n");
     return 0;
 }

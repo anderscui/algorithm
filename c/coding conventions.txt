@@ -1,0 +1,7 @@
+
+Macros and Constants in caps: MAX_BUFFER_SIZE;
+Struct names and Typedefs in PascalCase: TrackingOrder;
+Global variables: they are evil ?? PascalCase;
+
+Others
+Files, Local variables, Functions are like lowercase_with_underscore;

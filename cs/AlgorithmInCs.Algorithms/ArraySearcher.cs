@@ -43,7 +43,8 @@ namespace Andersc.AlgorithmInCs.Algorithms
                 {
                     return mid;
                 }
-                else if(a[mid] < v)
+
+                if(a[mid] < v)
                 {
                     left = mid + 1;
                 }
