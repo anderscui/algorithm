@@ -1,0 +1,115 @@
+# depslib dependency file v1.0
+1375879447 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04\ch04-adt\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1375945092 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\stack.c
+	<assert.h>
+	<stdlib.h>
+	"item.h"
+	"stack.h"
+
+1375973251 d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\item.h
+
+1375945069 d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\stack.h
+	<stdbool.h>
+	"item.h"
+
+1375884548 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\stack_client.c
+	<stdio.h>
+	<stdlib.h>
+	"item.h"
+	"stack.h"
+	"common/cmn_lib.h"
+
+1375884000 source:d:\andersc\github\algorithm\c\algorithms_in_c\common\cmn_lib.c
+	<stdio.h>
+	"cmn_lib.h"
+
+1375883981 d:\andersc\github\algorithm\c\algorithms_in_c\common\cmn_lib.h
+
+1375884099 source:d:\andersc\github\algorithm\c\algorithms_in_c\common\cmn_lib_client.c
+	<stdio.h>
+	"cmn_lib.h"
+
+1375884000 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\common\cmn_lib.c
+	<stdio.h>
+	"cmn_lib.h"
+
+1375883981 d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\common\cmn_lib.h
+
+1375884099 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\common\cmn_lib_client.c
+	<stdio.h>
+	"cmn_lib.h"
+
+1375945987 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\queue.c
+	<assert.h>
+	<stdlib.h>
+	"item.h"
+	"queue.h"
+
+1375945970 d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\queue.h
+	<stdbool.h>
+	"item.h"
+
+1375946663 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\queue_client.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"item.h"
+	"queue.h"
+
+1375974501 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\stack_non_dup.c
+	<assert.h>
+	<stdlib.h>
+	"item.h"
+	"stack_non_dup.h"
+
+1375973287 d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\stack_non_dup.h
+	<stdbool.h>
+	"item.h"
+
+1375974591 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\stack_non_dup_client.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"item.h"
+	"stack_non_dup.h"
+	"common/cmn_lib.h"
+
+1375978801 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\complex.c
+	<stdio.h>
+	<stdlib.h>
+	"complex.h"
+
+1375979236 d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\complex.h
+
+1375979003 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\complex_client.c
+	<stdio.h>
+	<stdlib.h>
+	"complex.h"
+
+1375979762 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\fccomplex.c
+	<stdio.h>
+	<stdlib.h>
+	"fcComplex.h"
+
+1375979745 d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\fccomplex.h
+
+1375979778 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\fccomplex_client.c
+	<stdio.h>
+	<stdlib.h>
+	"fcComplex.h"
+
+1376118603 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\polynomial.c
+	<stdio.h>
+	<stdlib.h>
+	"polynomial.h"
+
+1376118487 d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\polynomial.h
+
+1376118269 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch04-adt\polynomial_client.c
+	<stdio.h>
+	<stdlib.h>
+	"polynomial.h"
+

@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1375878631 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch03\avg.c
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"Num.h"
+
+1375547116 d:\andersc\github\algorithm\c\algorithms_in_c\ch03\num.h
+
+1375878631 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch03-basic-structs\avg.c
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"Num.h"
+
+1375547116 d:\andersc\github\algorithm\c\algorithms_in_c\ch03-basic-structs\num.h
+
+1375878760 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch03-basic-structs\num.c
+	<stdio.h>
+	<stdlib.h>
+	"Num.h"
+

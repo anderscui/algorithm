@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1375884000 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\common\cmn_lib.c
+	<stdio.h>
+	"cmn_lib.h"
+
+1375883981 d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\common\cmn_lib.h
+
+1376121583 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\main.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376122785 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\eval_prefix_exp.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1376155663 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\list_recur.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+	"list.h"
+
+1376155377 d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\list.h
+	<stdbool.h>
+
+1376155694 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\list.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"list.h"
+

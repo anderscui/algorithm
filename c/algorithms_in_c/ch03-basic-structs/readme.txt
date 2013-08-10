@@ -5,11 +5,15 @@
 
 2. sieve_of_eratosthenes.c
 
-3.
+3. multi_dim_array.c
+    shows how to create a multi-dimension array dynamically.
+
+4. list.h, list.c, list_client.c
+    show a basic implementation of linked list, it's not a completely designed ADT.
+
 
 
 programs remaind:
-3.8
 3.17 qsort; dynamic string input;
 3.18
 3.19
