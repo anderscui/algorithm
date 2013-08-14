@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1375884000 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\common\cmn_lib.c
+1376158733 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\common\cmn_lib.c
 	<stdio.h>
+	<stdlib.h>
 	"cmn_lib.h"
 
-1375883981 d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\common\cmn_lib.h
+1376362575 d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\common\cmn_lib.h
 
 1376121583 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\main.c
 	<stdio.h>
@@ -30,4 +31,66 @@
 	<stdio.h>
 	<stdlib.h>
 	"list.h"
+
+1376205328 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\max_of_array_recur.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376204912 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\hanoi.c
+	<stdio.h>
+	<stdlib.h>
+
+1376320659 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\fib_calc.c
+	<stdio.h>
+	<stdlib.h>
+
+1376447873 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\maths.c
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376323890 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\subsets.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376365715 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\find_changes.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376458653 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\knapsack.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376411599 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\binary_tree.c
+	<stdio.h>
+	<stdlib.h>
+	"binary_tree.h"
+
+1376411536 d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\binary_tree.h
+
+1376411639 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\binary_tree_client.c
+	<stdio.h>
+	<stdlib.h>
+	"binary_tree.h"
+	"stack.h"
+
+1376411240 d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\stack.h
+	<stdbool.h>
+	"binary_tree.h"
+
+1376411440 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\stack.c
+	<assert.h>
+	<stdlib.h>
+	"stack.h"
+
+1376450952 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch05-recursion\permutations.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
 

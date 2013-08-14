@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmInCs.Algorithms", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmInCs.Tests", "AlgorithmInCs.Tests\AlgorithmInCs.Tests.csproj", "{D76446CD-2798-495F-B80C-BBA9E368D760}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmInCs.Figures", "AlgorithmInCs.Graphs\AlgorithmInCs.Figures.csproj", "{808228F5-0E28-4ACF-81DB-A467C2411D00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{D76446CD-2798-495F-B80C-BBA9E368D760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D76446CD-2798-495F-B80C-BBA9E368D760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D76446CD-2798-495F-B80C-BBA9E368D760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808228F5-0E28-4ACF-81DB-A467C2411D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808228F5-0E28-4ACF-81DB-A467C2411D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808228F5-0E28-4ACF-81DB-A467C2411D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808228F5-0E28-4ACF-81DB-A467C2411D00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

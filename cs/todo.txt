@@ -1,0 +1,39 @@
+
+08/15/2013
+b1.ch01 合并-查找算法
+    Use tree (by plain array) to represent the data;
+
+b1.ch03 Basic
+    The practical usage of ADT in real project;
+
+    Multi-Dimensional Array
+    For graphs;
+
+    3.17 qsort; dynamic string input;
+    3.18
+    3.19
+    3.20
+
+    pay more attention to:
+    3.17
+
+b1.ch04 ADT
+    How to handle errors(exception/invalid inputs or args, etc);
+
+    4.8: difficult and interesting;
+    4.17: mini calculator/compiler; (symbol table);
+    4.60: calculator for Complex Number;
+    4.70: use linked list to implement "sparse" polynomial;
+
+b1.ch05 Recursion and Tree
+    Draw figures in a GUI framework (C# or py or even PostScript);
+        http://pscript.dubmun.com/tutorial1.html
+    
+    Knapsack by Dynamic Programming;
+        by Backtrack (done)
+
+    Read again: 5.6 - 5.8
+
+    The key role of recursion and tree in Computer Science.
+
+
