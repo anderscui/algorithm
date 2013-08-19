@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1376747415 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\main.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376878567 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\common\cmn_lib.c
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+	"cmn_lib.h"
+
+1376878523 d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\common\cmn_lib.h
+
+1376746888 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\insertion.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376749104 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\bubble.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376758080 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\shell.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376760862 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\array.c
+	<stdio.h>
+	<stdlib.h>
+	"item.h"
+
+1376760830 d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\item.h
+
+1376760818 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\item.c
+	<stdio.h>
+	<stdlib.h>
+	"item.h"
+
+1376760523 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\array_client.c
+	<stdio.h>
+	<stdlib.h>
+	"array.h"
+	"item.h"
+
+1376760670 d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\array.h
+	"item.h"
+
+1376814435 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\dist.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376843565 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\quick_sort.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+
+1376879952 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\minunit_example.c
+	<stdio.h>
+	"minunit.h"
+
+1376879967 d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\minunit.h
+
