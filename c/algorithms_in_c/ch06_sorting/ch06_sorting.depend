@@ -64,3 +64,8 @@
 
 1376879967 d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\minunit.h
 
+1376973109 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch06_sorting\quick_select.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+

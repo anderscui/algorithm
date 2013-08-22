@@ -6,6 +6,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{943B12D9-1DB1-4456-80B2-63485DE0E4EE}"
 	ProjectSection(SolutionItems) = preProject
 		docs\readme.txt = docs\readme.txt
+		todo.txt = todo.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmInCs.Algorithms", "AlgorithmInCs.Algorithms\AlgorithmInCs.Algorithms.csproj", "{CBB2BEC1-F43E-4634-A9C4-6DF930CDDF8D}"

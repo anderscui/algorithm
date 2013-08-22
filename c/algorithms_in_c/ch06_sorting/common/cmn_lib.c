@@ -46,3 +46,12 @@ void show_array(int a[], int n)
         printf("%d ", a[i]);
     }
 }
+
+void copy_array(int a[], int b[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        b[i] = a[i];
+    }
+}

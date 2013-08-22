@@ -6,7 +6,7 @@ using System.Text;
 namespace Andersc.AlgorithmInCs.Algorithms
 {
     /// <summary>
-    /// From b1, ch02
+    /// From [Sed12], ch02
     /// Demonstrates basic impls of searching elements in an array.
     /// Given N objects(to search in), M other objects(to be searched), commonly M is much larger than N.
     /// </summary>

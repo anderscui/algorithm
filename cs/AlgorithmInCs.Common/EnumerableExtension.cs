@@ -17,12 +17,12 @@ namespace Andersc.AlgorithmInCs.Common
 
         public static bool IsEmpty<T>(this IEnumerable<T> enumerable)
         {
-            return (enumerable.IsNull() || (enumerable.Count() == 0));
+            return (enumerable.IsNull() || (!enumerable.Any()));
         }
 
         public static bool IsNotEmpty<T>(this IEnumerable<T> enumerable)
         {
-            return (enumerable.IsNotNull() && (enumerable.Count() > 0));
+            return (enumerable.IsNotNull() && (enumerable.Any()));
         }
 
         public static bool Contains<T>(this IEnumerable enumerable, T value, Func<T, T, bool> areEqual)
