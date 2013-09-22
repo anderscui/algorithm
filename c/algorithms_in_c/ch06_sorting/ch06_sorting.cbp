@@ -31,8 +31,81 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="array.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="array.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="array_client.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="bubble.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="common/cmn_lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common/cmn_lib.h" />
+		<Unit filename="common/cmn_lib_client.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="counting.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="dist.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="insertion.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="item.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="item.h">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="merge_sort.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="minunit.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="minunit_example.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="quick_select.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="quick_sort.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="selection.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="shell.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="sort.c">
+			<Option compilerVar="CC" />
+			<Option target="Release" />
 		</Unit>
 		<Extensions>
 			<code_completion />

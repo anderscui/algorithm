@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1377065670 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch10_radix_sort\common\cmn_lib.c
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+	"cmn_lib.h"
+
+1377065615 d:\andersc\github\algorithm\c\algorithms_in_c\ch10_radix_sort\common\cmn_lib.h
+
+1376760818 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch10_radix_sort\item.c
+	<stdio.h>
+	<stdlib.h>
+	"item.h"
+
+1377169990 d:\andersc\github\algorithm\c\algorithms_in_c\ch10_radix_sort\item.h
+
+1377679426 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch10_radix_sort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+

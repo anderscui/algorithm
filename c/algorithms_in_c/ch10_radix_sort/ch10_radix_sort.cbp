@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="ch09_priority_queue" />
+		<Option title="ch10_radix_sort" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/ch09_priority_queue" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/ch10_radix_sort" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/ch09_priority_queue" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/ch10_radix_sort" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -39,44 +39,18 @@
 			<Option compilerVar="CC" />
 			<Option target="Release" />
 		</Unit>
-		<Unit filename="errors.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="heap_sort.c">
-			<Option compilerVar="CC" />
-			<Option target="Release" />
-		</Unit>
 		<Unit filename="item.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="item.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="pq.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="pq_array.c">
-			<Option compilerVar="CC" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="pq_client.c">
-			<Option compilerVar="CC" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="pq_heap.c">
-			<Option compilerVar="CC" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="pq_sort.c">
-			<Option compilerVar="CC" />
-			<Option target="Release" />
 		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
+			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

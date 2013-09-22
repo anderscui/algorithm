@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1377065670 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\common\cmn_lib.c
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+	"cmn_lib.h"
+
+1377065615 d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\common\cmn_lib.h
+
+1376760818 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\item.c
+	<stdio.h>
+	<stdlib.h>
+	"item.h"
+
+1377169990 d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\item.h
+
+1377527903 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\pq.c
+	<assert.h>
+	<stdlib.h>
+	"item.h"
+	"pq.h"
+
+1377527847 d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\pq.h
+	"item.h"
+
+1377528062 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\pq_client.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+	"item.h"
+	"pq.h"
+
+1377527903 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\pq_array.c
+	<assert.h>
+	<stdlib.h>
+	"item.h"
+	"pq.h"
+
+1377535630 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\pq_heap.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"item.h"
+	"pq.h"
+
+1377536536 source:d:\andersc\github\algorithm\c\algorithms_in_c\ch09_priority_queue\pq_sort.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"common/cmn_lib.h"
+	"item.h"
+	"pq.h"
+

@@ -15,7 +15,6 @@ typedef int Item;
 #define exch(A, B) { Item t = A; A = B; B = t; }
 #define compexch(A, B) if (less(B, A)) exch(A, B)
 
-// 0, 1, 2, 0, 1, 2, 0, 1, 2, 0
 void sort(Item a[], int l, int r)
 {
     int len = (r - l) + 1;
