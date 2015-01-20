@@ -2,22 +2,33 @@ class Solution:
     # @return a string
     def convert(self, s, nRows):
 
-        section_size = 2 * nRows - 2
-        remainder = len(s) % section_size
-        if remainder:
-            s += ' ' * (section_size - remainder)
-        n_section = len(s) / section_size
+        if not s:
+            return s
 
-        newstr = ''
-        start = 0
-        sep = ' ' * ((nRows-1) / 2)
-        for i in xrange(n_section):
-            newstr += s[start:start+nRows] + sep + s[start+nRows] + sep
-            start += section_size
+        if nRows <= 1:
+            return s
 
-        res = ''
-        for i in xrange(nRows):
-            for j in xrange(n_section):
-                if newstr[nRows * j + i] != ' ':
-                    res += newstr[nRows * j + i]
-        return res
+        rows = nRows
+        section_size = 2 * rows - 2
+
+        final = ''
+        for i in xrange(rows):
+            if i == 0 or i == (rows-1):
+                j = i
+                while j < len(s):
+                    final += s[j]
+                    j += section_size
+            else:
+                j = i
+                flag = True
+                larger_step = 2 * (rows - 1 - i)
+                small_step = section_size - larger_step
+                while j < len(s):
+                    final += s[j]
+                    if flag:
+                        j += larger_step
+                    else:
+                        j += small_step
+                    flag = not flag
+
+        return final

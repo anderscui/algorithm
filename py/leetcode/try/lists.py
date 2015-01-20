@@ -8,3 +8,8 @@ def rtrim_zeros(ver_num):
 print(rtrim_zeros([0, 0, 0]))
 print(rtrim_zeros([1, 0, 0]))
 print(rtrim_zeros([1, 1, 0, 0]))
+
+
+col = [' '] * 5
+print(col)
+print(''.join(col))
