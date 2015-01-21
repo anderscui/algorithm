@@ -214,3 +214,7 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 */.idea/*
+
+py/leetcode/.idea/leetcode.iml
+py/leetcode/.idea/misc.xml
+py/leetcode/.idea/workspace.xml
