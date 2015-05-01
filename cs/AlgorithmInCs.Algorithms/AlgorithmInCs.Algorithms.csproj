@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ArraySearcher.cs" />
     <Compile Include="Evaluator.cs" />
+    <Compile Include="Problems\BracketMatcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Connectivity.cs" />
     <Compile Include="Sorting\LinkedListSorter.cs" />

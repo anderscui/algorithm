@@ -226,8 +226,8 @@ namespace Andersc.AlgorithmInCs.Algorithms
 
         private class Precedence
         {
-            public int InputSymbol { get; set; }
-            public int TopOfStack { get; set; }
+            public int InputSymbol { get; private set; }
+            public int TopOfStack { get; private set; }
 
             public Precedence(int inSymbol, int topSymbol)
             {

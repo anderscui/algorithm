@@ -45,21 +45,21 @@ namespace Andersc.AlgorithmInCs.Tests.Algorithms
         public void TestQuickFind() 
         {
             var result = Connectivity.QuickFind(GetTestData());
-            result.Print();
+            result.PrintToConsole();
         }
 
         [TestCase]
         public void TestQuickUnion()
         {
             var result = Connectivity.QuickUnion(GetTestData());
-            result.Print("QuickUnion: ");
+            result.PrintToConsole("QuickUnion: ");
         }
 
         [TestCase]
         public void TestWeightedQuickUnion()
         {
             var result = Connectivity.WeightedQuickUnion(GetTestData());
-            result.Print("WeightedQuickUnion: ");
+            result.PrintToConsole("WeightedQuickUnion: ");
         }
     }
 }

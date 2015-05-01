@@ -46,8 +46,10 @@
     <Compile Include="Algorithms\TestArraySearcher.cs" />
     <Compile Include="Algorithms\TestConnectivity.cs" />
     <Compile Include="Algorithms\TestEvaluator.cs" />
+    <Compile Include="FCL\TestList.cs" />
     <Compile Include="FCL\TestLinkedList.cs" />
     <Compile Include="FCL\TestLinqToObjects.cs" />
+    <Compile Include="Problems\TestBracketMatcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
