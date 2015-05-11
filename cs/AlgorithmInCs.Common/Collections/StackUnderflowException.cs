@@ -3,7 +3,7 @@
 namespace Andersc.AlgorithmInCs.Common.Collections
 {
     [Serializable]
-    public class StackUnderflowException : Exception
+    public class StackUnderflowException : InvalidOperationException
     {
         public StackUnderflowException() { }
         public StackUnderflowException(string message) : base(message) { }

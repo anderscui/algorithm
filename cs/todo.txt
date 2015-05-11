@@ -37,3 +37,9 @@ b1.ch05 Recursion and Tree
     The key role of recursion and tree in Computer Science.
 
 
+05/11/2015
+
+Stack and Queue are done, ExpressionEvaluator and RPN are also added.
+
+TODO: 8 queens; maze;
+

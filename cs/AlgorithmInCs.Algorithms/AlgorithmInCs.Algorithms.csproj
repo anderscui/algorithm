@@ -41,7 +41,9 @@
   <ItemGroup>
     <Compile Include="ArraySearcher.cs" />
     <Compile Include="Evaluator.cs" />
+    <Compile Include="Problems\Maths.cs" />
     <Compile Include="Problems\BracketMatcher.cs" />
+    <Compile Include="Problems\ExpressionEvaluator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Connectivity.cs" />
     <Compile Include="Sorting\LinkedListSorter.cs" />
@@ -51,6 +53,9 @@
       <Project>{befd2c23-4360-4523-8118-b77f84813d00}</Project>
       <Name>AlgorithmInCs.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Maths\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

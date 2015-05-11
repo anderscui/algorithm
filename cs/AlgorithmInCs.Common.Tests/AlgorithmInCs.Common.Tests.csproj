@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\TestLinkedList.cs" />
+    <Compile Include="Collections\TestQueue.cs" />
+    <Compile Include="Collections\TestStack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

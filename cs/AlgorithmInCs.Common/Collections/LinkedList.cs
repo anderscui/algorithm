@@ -108,7 +108,7 @@ namespace Andersc.AlgorithmInCs.Common.Collections
 
         public LinkedListNode<T> Prepend(T item)
         {
-            var newNode = new LinkedListNode<T>(item);
+            var newNode = new LinkedListNode<T>(this, item);
             if (IsEmpty)
             {
                 InsertNodeIntoEmptyList(newNode);
@@ -402,36 +402,7 @@ namespace Andersc.AlgorithmInCs.Common.Collections
                 throw new CollectionEmptyException();
             }
 
-            var comparer = Comparer<T>.Default;
-            var defValue = default(T);
-
-            var pos = head;
-            var next = head.Next;
-            // If T is a reference type
-            if (defValue == null)
-            {
-                while (next != null && next != head)
-                {
-                    if (next.Value != null && comparer.Compare(next.Value, pos.Value) > 0)
-                    {
-                        pos = next;
-                    }
-                    next = next.Next;
-                }
-                return pos;
-            }
-            else
-            {
-                while (next != null && next != head)
-                {
-                    if (comparer.Compare(next.Value, pos.Value) > 0)
-                    {
-                        pos = next;
-                    }
-                    next = next.Next;
-                }
-                return pos;
-            }
+            return Max(First, Last);
         }
 
         public LinkedListNode<T> Max(LinkedListNode<T> start, LinkedListNode<T> end)
@@ -454,7 +425,7 @@ namespace Andersc.AlgorithmInCs.Common.Collections
             // If T is a reference type
             if (defValue == null)
             {
-                while (next != null && next != end)
+                while (next != null && next.Previous != end)
                 {
                     if (next.Value != null && comparer.Compare(next.Value, pos.Value) > 0)
                     {
@@ -466,7 +437,7 @@ namespace Andersc.AlgorithmInCs.Common.Collections
             }
             else
             {
-                while (next != null && next != head)
+                while (next != null && next.Previous != end)
                 {
                     if (comparer.Compare(next.Value, pos.Value) > 0)
                     {
@@ -486,7 +457,51 @@ namespace Andersc.AlgorithmInCs.Common.Collections
 
             var h = First;
             var t = Last;
+            var i = size;
+            while (i > 1)
+            {
+                var nextMax = Max(h, t);
+                if (nextMax != t)
+                {
+                    var temp = t.Value;
+                    t.Value = nextMax.Value;
+                    nextMax.Value = temp;
+                    t = t.Previous;
+                }
+                i--;
+            }
+        }
 
+        public void InsertionSort()
+        {
+            if (size < 2) { return; }
+
+            var comparer = Comparer<T>.Default;
+
+            var next = First.Next;
+            while (next != null)
+            {
+                Console.WriteLine(next.Value);
+
+                var pos = next.Previous;
+                while (pos != null && comparer.Compare(next.Value, pos.Value) < 0)
+                {
+                    pos = pos.Previous;
+                }
+
+                if (pos == null)
+                {
+                    Prepend(next.Value);
+                }
+                else
+                {
+                    AddAfter(pos, next.Value);
+                }
+
+                var prev = next.Previous;
+                Remove(next);
+                next = prev.Next;
+            }
         }
 
         #endregion
