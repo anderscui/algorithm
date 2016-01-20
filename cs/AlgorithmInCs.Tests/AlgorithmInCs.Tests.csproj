@@ -34,6 +34,7 @@
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,10 +47,13 @@
     <Compile Include="Algorithms\TestArraySearcher.cs" />
     <Compile Include="Algorithms\TestConnectivity.cs" />
     <Compile Include="Algorithms\TestEvaluator.cs" />
+    <Compile Include="FCL\TestValidator.cs" />
     <Compile Include="FCL\TestString.cs" />
     <Compile Include="FCL\TestList.cs" />
     <Compile Include="FCL\TestLinkedList.cs" />
     <Compile Include="FCL\TestLinqToObjects.cs" />
+    <Compile Include="Maths\TestPrimeFactors.cs" />
+    <Compile Include="Maths\TestPrimer.cs" />
     <Compile Include="Problems\TestBracketMatcher.cs" />
     <Compile Include="Problems\TestExpressionEvaluator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

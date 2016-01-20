@@ -52,5 +52,13 @@ namespace Andersc.AlgorithmInCs.Tests.FCL
             Assert.That(parts[1], Is.EqualTo("b"));
             Assert.That(parts[2], Is.EqualTo("c"));
         }
+
+        [Test]
+        public void TestCharOrdinality()
+        {
+            var c = "ab"[0];
+            Console.WriteLine((int)c);
+            Console.WriteLine('c');
+        }
     }
 }
