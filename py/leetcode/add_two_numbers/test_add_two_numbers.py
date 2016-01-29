@@ -41,8 +41,3 @@ print('5 + 5')
 h1 = build_num_list([5])
 h2 = build_num_list([5])
 print(sln.addTwoNumbers(h1, h2).concat())
-
-
-# if cur < 0:
-#                 digits = [0] + digits
-#                 cur = 0
