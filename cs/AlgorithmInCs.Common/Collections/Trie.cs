@@ -21,7 +21,7 @@ namespace Andersc.AlgorithmInCs.Common.Collections
             //Children = null;
         }
 
-        public int Insert(string s, int pos, int freq = 0)
+        public int Insert(string s, int pos, int freq = 1)
         {
             if (string.IsNullOrEmpty(s) || pos >= s.Length)
             {
@@ -42,13 +42,11 @@ namespace Andersc.AlgorithmInCs.Common.Collections
             var curNode = Children[c];
             if (pos == s.Length - 1)
             {
-                curNode.Frequency++;
+                curNode.Frequency += freq;
                 return curNode.Frequency;
             }
-            else
-            {
-                return curNode.Insert(s, pos + 1);
-            }
+
+            return curNode.Insert(s, pos + 1, freq);
         }
 
         public TrieNode Search(string s, int pos)
@@ -58,18 +56,18 @@ namespace Andersc.AlgorithmInCs.Common.Collections
                 return null;
             }
 
+            // if out of range or without any child nodes
             if (pos >= s.Length || Children == null)
             {
                 return null;
             }
-            else if (pos == s.Length - 1)
+            // if reaches the last char of s, it's time to make the decision.
+            if (pos == s.Length - 1)
             {
-                return Children[s[pos]];
+                return Children.ContainsKey(s[pos]) ? Children[s[pos]] : null;
             }
-            else
-            {
-                return Children.ContainsKey(s[pos]) ? Children[s[pos]].Search(s, pos + 1) : null;
-            }
+            // continue if necessary.
+            return Children.ContainsKey(s[pos]) ? Children[s[pos]].Search(s, pos + 1) : null;
         }
     }
 
@@ -78,9 +76,10 @@ namespace Andersc.AlgorithmInCs.Common.Collections
         //string BestMatch(string word, long maxTime);
         bool Contains(string word);
         int Frequency(string word);
-        int Insert(string word);
+        int Insert(string word, int freq = 1);
         //bool Remove(string word);
-        int Size();
+        int Count { get; }
+        int TotalFrequency { get; }
     }
 
     public class Trie : ITrie
@@ -92,6 +91,7 @@ namespace Andersc.AlgorithmInCs.Common.Collections
         private readonly TrieNode Root;
 
         public int Count { get; private set; }
+        public int TotalFrequency { get; private set; }
 
         public Trie()
         {
@@ -100,6 +100,14 @@ namespace Andersc.AlgorithmInCs.Common.Collections
         }
 
         public bool Contains(string word)
+        {
+            CheckWord(word);
+
+            var node = Root.Search(word.Trim(), 0);
+            return node.IsNotNull() && node.Frequency > 0;
+        }
+
+        public bool ContainsPrefix(string word)
         {
             CheckWord(word);
 
@@ -115,22 +123,18 @@ namespace Andersc.AlgorithmInCs.Common.Collections
             return node.IsNull() ? 0 : node.Frequency;
         }
 
-        public int Insert(string word)
+        public int Insert(string word, int freq = 1)
         {
             CheckWord(word);
 
-            var i = Root.Insert(word.Trim(), 0);
+            var i = Root.Insert(word.Trim(), 0, freq);
             if (i > 0)
             {
+                TotalFrequency += freq;
                 Count++;
             }
 
             return i;
-        }
-
-        public int Size()
-        {
-            return Count;
         }
 
         private void CheckWord(string word)
