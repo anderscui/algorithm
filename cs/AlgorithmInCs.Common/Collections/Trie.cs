@@ -5,86 +5,140 @@ using System.Text;
 
 namespace Andersc.AlgorithmInCs.Common.Collections
 {
-    //public interface ITrie<T>
-    //{
-    //    void Add(string key, T value);
-    //    bool Contains(string key);
-    //    T Remove(string key);
-    //}
-
-    //public class TrieNode
-    //{
-    //    public char Key { get; set; }
-    //    public int? Value { get; set; }
-    //    public TrieNode Next { get; set; }
-    //    public List<TrieNode> Children { get; set; }
-    //}
-
-    //public class Trie
-    //{
-    //    public TrieNode Root { get; private set; }
-
-
-    //}
-
+    // Refer to: https://github.com/brianfromoregon/trie
     public class TrieNode
     {
-        public char Key { get; set; }
-        public int? Value { get; set; }
+        public char Char { get; set; }
+        public int Frequency { get; set; }
         public Dictionary<char, TrieNode> Children { get; set; }
+
+        public TrieNode(char ch)
+        {
+            Char = ch;
+            Frequency = 0;
+            
+            // TODO: or an empty dict?
+            //Children = null;
+        }
+
+        public int Insert(string s, int pos, int freq = 0)
+        {
+            if (string.IsNullOrEmpty(s) || pos >= s.Length)
+            {
+                return 0;
+            }
+
+            if (Children == null)
+            {
+                Children = new Dictionary<char, TrieNode>();
+            }
+
+            var c = s[pos];
+            if (!Children.ContainsKey(c))
+            {
+                Children[c] = new TrieNode(c);
+            }
+
+            var curNode = Children[c];
+            if (pos == s.Length - 1)
+            {
+                curNode.Frequency++;
+                return curNode.Frequency;
+            }
+            else
+            {
+                return curNode.Insert(s, pos + 1);
+            }
+        }
+
+        public TrieNode Search(string s, int pos)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return null;
+            }
+
+            if (pos >= s.Length || Children == null)
+            {
+                return null;
+            }
+            else if (pos == s.Length - 1)
+            {
+                return Children[s[pos]];
+            }
+            else
+            {
+                return Children.ContainsKey(s[pos]) ? Children[s[pos]].Search(s, pos + 1) : null;
+            }
+        }
     }
 
-    public class Trie
+    public interface ITrie
     {
-        private static readonly char RootKey = char.MinValue;
+        //string BestMatch(string word, long maxTime);
+        bool Contains(string word);
+        int Frequency(string word);
+        int Insert(string word);
+        //bool Remove(string word);
+        int Size();
+    }
+
+    public class Trie : ITrie
+    {
+        private static readonly char RootChar = '\0';
         private static readonly char EndKey = '\0';
         private static readonly int? MissingValue = 0;
 
-        public TrieNode Root { get; private set; }
+        private readonly TrieNode Root;
+
+        public int Count { get; private set; }
 
         public Trie()
         {
-            Root = new TrieNode() { Key = char.MinValue, Value = MissingValue, Children = new Dictionary<char, TrieNode>() };
+            Root = new TrieNode(RootChar);
+            Count = 0;
         }
 
-        public void Add(string key, int value)
+        public bool Contains(string word)
         {
-            if (string.IsNullOrWhiteSpace(key))
-            {
-                throw new ArgumentException("key must not be null or whitespace");
-            }
+            CheckWord(word);
 
-            key = key.Trim();
-            var curNode = Root;
-            foreach (var ch in key)
-            {
-                if (!curNode.Children.ContainsKey(ch))
-                {
-                    curNode.Children[ch] = new TrieNode() { Key = ch, Value = MissingValue, Children = new Dictionary<char, TrieNode>() };
-                }
-                curNode = curNode.Children[ch];
-            }
-            curNode.Value = value;
+            var node = Root.Search(word.Trim(), 0);
+            return node.IsNotNull();
         }
 
-        public bool ContainsKey(string key)
+        public int Frequency(string word)
         {
-            if (string.IsNullOrWhiteSpace(key))
+            CheckWord(word);
+
+            var node = Root.Search(word.Trim(), 0);
+            return node.IsNull() ? 0 : node.Frequency;
+        }
+
+        public int Insert(string word)
+        {
+            CheckWord(word);
+
+            var i = Root.Insert(word.Trim(), 0);
+            if (i > 0)
             {
-                throw new ArgumentException("key must not be null or whitespace");
+                Count++;
             }
 
-            key = key.Trim();
-            var curNode = Root;
-            foreach (var ch in key)
+            return i;
+        }
+
+        public int Size()
+        {
+            return Count;
+        }
+
+        private void CheckWord(string word)
+        {
+            if (string.IsNullOrWhiteSpace(word))
             {
-                if (!curNode.Children.ContainsKey(ch))
-                {
-                    return false;
-                }
-                curNode = curNode.Children[ch];
+                throw new ArgumentException("word must not be null or whitespace");
             }
-            return curNode.Value > 0;
         }
     }
 }

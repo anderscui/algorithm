@@ -16,19 +16,19 @@ namespace Andersc.AlgorithmInCs.Common.Tests.Collections
         private Trie GetTestTrie()
         {
             var trie = new Trie();
-            trie.Add("ann", 1);
-            trie.Add("anders", 3);
-            trie.Add("andy", 5);
+            trie.Insert("ann");
+            trie.Insert("anders");
+            trie.Insert("andy");
 
-            trie.Add("bill", 7);
-            trie.Add("candy", 9);
-            trie.Add("dove", 9);
+            trie.Insert("bill");
+            trie.Insert("candy");
+            trie.Insert("dove");
 
             return trie;
         }
 
         [Test]
-        public void TestAdd()
+        public void TestInsert()
         {
             var trie = GetTestTrie();
             Console.WriteLine(trie);
@@ -38,9 +38,9 @@ namespace Andersc.AlgorithmInCs.Common.Tests.Collections
         public void TestContainsKey()
         {
             var trie = GetTestTrie();
-            Assert.That(trie.ContainsKey("anders"));
-            Assert.That(trie.ContainsKey("andrew"), Is.False);
-            Assert.That(trie.ContainsKey("bily"));
+            Assert.That(trie.Contains("anders"));
+            Assert.That(trie.Contains("andrew"), Is.False);
+            Assert.That(trie.Contains("bily"));
         }
     }
 }
