@@ -53,6 +53,7 @@
     <Compile Include="Collections\SinglyLinkedListNode.cs" />
     <Compile Include="Collections\Stack.cs" />
     <Compile Include="Collections\StackUnderflowException.cs" />
+    <Compile Include="Collections\Trie.cs" />
     <Compile Include="EnumerableExtension.cs" />
     <Compile Include="Extensions\ArrayExtension.cs" />
     <Compile Include="ObjectDumper.cs" />

@@ -47,6 +47,7 @@
     <Compile Include="Algorithms\TestArraySearcher.cs" />
     <Compile Include="Algorithms\TestConnectivity.cs" />
     <Compile Include="Algorithms\TestEvaluator.cs" />
+    <Compile Include="FCL\TestNullable.cs" />
     <Compile Include="FCL\TestValidator.cs" />
     <Compile Include="FCL\TestString.cs" />
     <Compile Include="FCL\TestList.cs" />
