@@ -60,5 +60,29 @@ namespace Andersc.AlgorithmInCs.Tests.FCL
             Console.WriteLine((int)c);
             Console.WriteLine('c');
         }
+
+        [Test]
+        public void TestHex()
+        {
+            var s = "74 68 65"; // the
+            //s = "68 61 70 70 69 65 73 74 74 68 69 6E 67"; // happiest.thing
+            s = "65 76 65 72 69 73 2 6D 65 65 74"; // ever.is.2.meet
+            s = "61 70 65 72 66 65 63 74 6D 61 74 63 68"; // a.perfect.match
+            s = "6C 69 6B 65 75"; // like.u
+            s = "6E 6D 69 6C 6C 69 6F 6E 73 6F 66 70 65 6F 70 6C 65"; // n.millions.of.people
+            s = "65 69 74 68 65 72 65 61 72 6C 69 65 72 6E 6F 72"; // either.earlier.nor
+            s = "61 62 69 74 6C 61 74 65"; // a.bit.late
+            var parts = s.Split(' ');
+            foreach (var c in parts)
+            {
+                var val = Convert.ToInt32(c, 16);
+                var cval = char.ConvertFromUtf32(val);
+                Console.Write(cval);
+            }
+            Console.WriteLine();
+
+            //var parts = s.Split(' ').Select(p => char.Parse("\\x" + p)).ToArray();
+            //Console.WriteLine(new string(parts));
+        }
     }
 }

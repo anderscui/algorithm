@@ -38,6 +38,19 @@ namespace Andersc.AlgorithmInCs.Common
             return false;
         }
 
+        public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key, TValue defaultValue)
+        {
+            TValue value;
+            return dict.TryGetValue(key, out value) ? value : defaultValue;
+        }
+
+        public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dict, 
+            TKey key, Func<TValue> defaultValueProvider)
+        {
+            TValue value;
+            return dict.TryGetValue(key, out value) ? value : defaultValueProvider();
+        }
+
         // TODO: Impl.
         //public static bool IsAscOrdered<T>(this IEnumerable<T> enumerable) where T : IComparable<T>
         //{
