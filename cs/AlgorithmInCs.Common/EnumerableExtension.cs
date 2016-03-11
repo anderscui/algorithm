@@ -51,6 +51,26 @@ namespace Andersc.AlgorithmInCs.Common
             return dict.TryGetValue(key, out value) ? value : defaultValueProvider();
         }
 
+        public static IEnumerable<int> CumulativeSum(this IEnumerable<int> numbers)
+        {
+            var sum = 0;
+            foreach (var number in numbers)
+            {
+                sum += number;
+                yield return sum;
+            }
+        }
+
+        public static IEnumerable<T> Accumulate<T>(this IEnumerable<T> elements, Func<T, T, T> func)
+        {
+            var sum = default(T);
+            foreach (var element in elements)
+            {
+                sum = func(sum, element);
+                yield return sum;
+            }
+        }
+
         // TODO: Impl.
         //public static bool IsAscOrdered<T>(this IEnumerable<T> enumerable) where T : IComparable<T>
         //{

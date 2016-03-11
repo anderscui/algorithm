@@ -21,8 +21,15 @@ namespace Andersc.AlgorithmInCs.Tests.FCL
         [TestCase]
         public void TestAnyMethodForEmptyCollection()
         {
-            int[] arr = new int[0];
+            var arr = new int[0];
             Assert.That(arr.Any(), Is.False);
+        }
+
+        [Test]
+        public void TestAggregate()
+        {
+            var arr = new[] {1, 2, 3, 4, 5};
+            Console.WriteLine(arr.Aggregate(0, (x, y) => x + y));
         }
     }
 }
