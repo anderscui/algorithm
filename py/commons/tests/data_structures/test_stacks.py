@@ -2,12 +2,11 @@
 import unittest
 
 from commons.structs.exceptions import EmptyContainerError
-from commons.structs.stacks import ArrayStack
+from commons.structs.stacks import Stack, ArrayStack, LinkedListStack
 
 
 class TestStacks(unittest.TestCase):
-    def test_array_stack(self):
-        stack = ArrayStack()
+    def _test_stack(self, stack: Stack):
         self.assertTrue(stack.is_empty())
 
         self.assertRaises(EmptyContainerError, stack.top)
@@ -24,8 +23,9 @@ class TestStacks(unittest.TestCase):
         self.assertEqual(items[-2], stack.top())
         self.assertEqual(len(items) - 1, len(stack))
 
-    def test_array_stack_order(self):
-        stack = ArrayStack()
+    def _test_stack_order(self, stack: Stack):
+        self.assertTrue(stack.is_empty())
+
         items = list(range(10))
         for item in items:
             stack.push(item)
@@ -36,4 +36,14 @@ class TestStacks(unittest.TestCase):
 
         self.assertListEqual(list(reversed(items)), values)
 
+    def test_array_stack(self):
+        self._test_stack(ArrayStack())
 
+    def test_array_stack_order(self):
+        self._test_stack_order(ArrayStack())
+
+    def test_linked_list_stack(self):
+        self._test_stack(LinkedListStack())
+
+    def test_linked_list_stack_order(self):
+        self._test_stack_order(LinkedListStack())

@@ -1,4 +1,6 @@
 # coding=utf-8
+from collections.abc import Iterable
+from heapq import heappush, heappop
 from typing import List
 
 from commons.commons.iterable import merge_sorted_lists
@@ -36,6 +38,13 @@ def quick_sort(s: List):
         else:
             greater.append(x)
     return quick_sort(less) + equal + quick_sort(greater)
+
+
+def heap_sort(s: Iterable):
+    h = []
+    for val in s:
+        heappush(h, val)
+    return [heappop(h) for _ in range(len(h))]
 
 
 def selection_sort(s: List):

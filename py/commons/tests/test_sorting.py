@@ -2,7 +2,7 @@
 import unittest
 
 from commons.sorting.sorting import merge_sort, quick_sort, \
-    selection_sort, insertion_sort, bubble_sort
+    selection_sort, insertion_sort, bubble_sort, heap_sort
 
 
 class TestSorting(unittest.TestCase):
@@ -33,3 +33,8 @@ class TestSorting(unittest.TestCase):
         l = self.get_small_num_list()
         bubble_sort(l)
         self.assertListEqual(sorted(l), l)
+
+    def test_heap_sort(self):
+        l = self.get_small_num_list()
+        result = heap_sort(l)
+        self.assertListEqual(sorted(l), result)

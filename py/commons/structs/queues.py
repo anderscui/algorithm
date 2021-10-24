@@ -27,8 +27,10 @@ class Queue(ABC):
 
 
 class ArrayQueue(Queue):
+    DEFAULT_CAPACITY = 10
+
     def __init__(self):
-        self._data = []
+        self._data = [None] * ArrayQueue.DEFAULT_CAPACITY
         self._size = 0
         self._front = 0
 

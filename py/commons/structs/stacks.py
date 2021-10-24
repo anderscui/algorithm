@@ -2,6 +2,7 @@
 from abc import ABC, abstractmethod
 
 from commons.structs.exceptions import EmptyContainerError
+from commons.structs.linked_lists import LinkedList
 
 
 class Stack(ABC):
@@ -25,6 +26,10 @@ class Stack(ABC):
     def __len__(self):
         raise NotImplementedError
 
+    def _check_empty(self):
+        if self.is_empty():
+            raise EmptyContainerError('Stack is empty')
+
 
 class ArrayStack(Stack):
     def __init__(self):
@@ -47,6 +52,24 @@ class ArrayStack(Stack):
     def __len__(self):
         return len(self._data)
 
-    def _check_empty(self):
-        if self.is_empty():
-            raise EmptyContainerError('Stack is empty')
+
+class LinkedListStack(Stack):
+    def __init__(self):
+        self._data = LinkedList()
+
+    def push(self, item):
+        self._data.add_first(item)
+
+    def pop(self):
+        self._check_empty()
+        return self._data.remove_first()
+
+    def top(self):
+        self._check_empty()
+        return self._data.head.value
+
+    def is_empty(self) -> bool:
+        return self._data.is_empty()
+
+    def __len__(self):
+        return len(self._data)
