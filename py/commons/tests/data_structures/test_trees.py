@@ -1,14 +1,10 @@
 # coding=utf-8
 import unittest
 
-from commons.structs.exceptions import EmptyContainerError
 from commons.structs.trees import Tree, BinaryTree, LinkedBinaryTree
 
 
 class TestTrees(unittest.TestCase):
-    def _test_binary_tree(self, tree: BinaryTree):
-        self.assertTrue(tree.is_empty())
-
     def test_linked_binary_tree(self):
         tree = LinkedBinaryTree()
         self.assertTrue(tree.is_empty())
