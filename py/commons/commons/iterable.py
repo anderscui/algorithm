@@ -1,5 +1,6 @@
 # coding=utf-8
-from collections import Iterable, Counter
+from collections import Counter
+from collections.abc import Iterable
 from typing import List, Sequence
 
 
